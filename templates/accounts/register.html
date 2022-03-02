@@ -4,5 +4,57 @@
 {% block content %}
 
 
+<div class="container">
+
+    <form action="{url 'register' }" method="POST">
+        {% csrf_token %}
+    <div class="mb-3">
+      <label class="form-label">First name</label>
+      {{form.first_name}}
+    </div>
+    <div class="mb-3">
+        <label class="form-label">last name</label>
+        {{form.last_name}}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        {{form.email}}
+      </div>
+       <div class="mb-3">
+        <label class="form-label">phone number</label>
+        {{form.phone_number}}
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      {{form.password}}
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+        {{form.confirm_password}}
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 {% endblock %}
